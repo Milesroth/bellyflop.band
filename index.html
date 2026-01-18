@@ -97,17 +97,17 @@
       border: none;
     }
 
-    /* ✅ FIXED GALLERY */
+        /* MASONRY GALLERY */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      align-items: start;
+      column-count: 3;
+      column-gap: 20px;
     }
-
+    
     .gallery img {
       width: 100%;
       height: auto;
+      margin-bottom: 20px;
+      break-inside: avoid;
       display: block;
       border: 1px solid #777;
     }
