@@ -1,49 +1,183 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>bellyflop</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belly Flop</title>
 
-    <style type="text/css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #f2f2f2;
+    }
 
-        .img_deg
-      {
-        float: right;
-        width: 45%
+    a {
+      color: #f2f2f2;
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    section {
+      padding: 60px 80px;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 80px;
+    }
+
+    .socials a {
+      margin-left: 20px;
+      border: 1px solid #777;
+      padding: 8px 12px;
+    }
+
+    /* INTRO */
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .intro img {
+      width: 100%;
+      border: 1px solid #777;
+    }
+
+    /* MUSIC */
+    .music {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .track {
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    /* VIDEO */
+    .video iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery div {
+      border: 1px solid #777;
+      height: 200px;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding-bottom: 100px;
+    }
+
+    @media (max-width: 900px) {
+      .intro, .music {
+        grid-template-columns: 1fr;
       }
 
-        .txt1_deg
-      {
-        float: left;
-        width: 45%
+      section, header {
+        padding: 40px;
       }
-        
-    </style>
-  
-  </head>
-  <body>
-    <h1>bellyflopppp</h1>
-    <p width: 45%;>Flopping around Europe together in 2026. We've been playing music together what feels like our entire lives. 
-      Came up with our first band in high school called Messed Up Interlude - link down below. Always recorded everything ourselves with the gear we had and want . Our draw will probably be minimal. But we will stand out with our passionate performance and joyful smiles :) 
-We hope you'll consider us to play at your venue, bar or festival. We also do private parties, funerals, bamitswas and really anything whatever we really don't care. But seriously we're like really serious about this shit. C u soon. Love n peace
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Bellyflop</h1>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Spotify</a>
+  </div>
+</header>
+
+<section class="intro">
+  <div>
+    <p>
+      Flopping around Europe together in 2026. We've been playing music together
+      what feels like our entire lives. Always recorded everything ourselves with
+      the gear we had. Our draw will probably be minimal — but we stand out with
+      passion, joyful smiles, and reckless commitment.
+      <br><br>
+      We play venues, bars, festivals, private parties, funerals, barmitzvahs —
+      we really don’t care. Seriously.
     </p>
-    <img class="img_deg" src="P7120065.jpg" alt="Belly Flop" width="500">
-  </body>
-  
-  <h3>Demo Track</h3>
-  <audio controls>
-    <source src="At least you could try.mp3" type="audio/mpeg">
-  </audio>
-  
-  <body>
-    <h2>"Perfect Moment" - a film about recording by Miles Roth starring Moritz Schmidt aka bellyflop</h2>
-    <iframe width="560" height="315" 
-    src="https://www.youtube.com/embed/9QPCT2OdLEk" 
-    title="Belly Flop video" frameborder="0" 
-    allowfullscreen></iframe>
-  </body>
-  
- 
+  </div>
 
-  
+  <img src="P7120065.jpg" alt="Belly Flop">
+</section>
+
+<section class="music">
+  <div>
+    <h2>Music</h2>
+    <p>Title – Link</p>
+    <p>Title – Link</p>
+    <p>Title – Link</p>
+  </div>
+
+  <div>
+    <h2>Demos</h2>
+
+    <div class="track">
+      <p>Demo 1</p>
+      <audio controls>
+        <source src="At least you could try.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="track">
+      <p>Demo 2</p>
+      <audio controls>
+        <source src="demo2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+</section>
+
+<section class="video">
+  <h2>"Perfect Moment" — a documentary</h2>
+  <iframe src="https://www.youtube.com/embed/9QPCT2OdLEk"
+          allowfullscreen></iframe>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Kontakt</h2>
+  <p>bellyflop@email.com</p>
+</section>
+
+</body>
 </html>
