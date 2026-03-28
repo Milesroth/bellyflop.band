@@ -38,6 +38,7 @@
       font-size: 6rem;
       letter-spacing: 1px;
     }
+
     .socials {
       display: flex;
       gap: 20px;
@@ -48,8 +49,16 @@
       padding: 12px 18px;
       font-size: 1rem;
       display: inline-block;
+      transition: all 0.25s ease;
     }
 
+    /* 🔥 HOVER GLOW */
+    .socials a:hover,
+    .listen-btn:hover {
+      border-color: #fff;
+      box-shadow: 0 0 12px rgba(255,255,255,0.4);
+      transform: translateY(-2px);
+    }
 
     /* INTRO */
     .intro {
@@ -69,7 +78,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
-      align-items: center;
+      align-items: start;
     }
 
     /* LEFT */
@@ -101,18 +110,33 @@
       flex-shrink: 0;
     }
 
-    /* RIGHT */
+    .listen-btn {
+      margin-left: auto;
+      border: 1px solid #777;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
+
+    /* RIGHT (ALBUM FEATURE) */
     .demos {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .track {
-      margin-bottom: 30px;
-    }
-
-    audio {
+    .demos img {
       width: 100%;
+      max-width: 420px;
+      border: 1px solid #777;
+      transition: all 0.3s ease;
+    }
+
+    .demos img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(255,255,255,0.25);
     }
 
     /* BIG VIDEO */
@@ -122,7 +146,7 @@
       border: none;
     }
 
-    /* GALLERY MASONRY */
+    /* GALLERY */
     .gallery {
       column-count: 3;
       column-gap: 20px;
@@ -137,7 +161,6 @@
       display: block;
     }
     
-    /* GALLERY VIDEO PLACEHOLDER */
     .video-thumb {
       position: relative;
       aspect-ratio: 16 / 9;
@@ -165,12 +188,13 @@
     }
 
     .gallery-note {
-  padding: 20px 80px 80px;
-  text-align: right;
-  font-size: 0.95rem;
-  color: #bbb;
-  opacity: 0.7;
+      padding: 20px 80px 80px;
+      text-align: right;
+      font-size: 0.95rem;
+      color: #bbb;
+      opacity: 0.7;
     }
+
     .contact {
       padding-bottom: 100px;
     }
@@ -181,22 +205,18 @@
         padding: 40px;
       }
 
-    header {
-      padding: 20px 25px;
-    }
+      header {
+        padding: 20px 25px;
+      }
     
-    header h1 {
-      font-size: 3rem;
-    }
-    
-    .socials {
-      gap: 8px;
-    }
-    
-    .socials a {
-      padding: 6px 10px;
-      font-size: 0.8rem;
-    }
+      header h1 {
+        font-size: 3rem;
+      }
+
+      .socials a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
 
       .intro,
       .music {
@@ -206,11 +226,7 @@
       .gallery {
         column-count: 1;
       }
-      .gallery-note {
-      padding: 20px 40px 60px;
-      text-align: left;
-      opacity: 0.7;
-    }
+
       .video iframe {
         height: 260px;
       }
@@ -233,115 +249,70 @@
     <p>
       We'll be touring around Europe together in 2026 - Available from Mai to August
       <br><br>
-      We've been playing music together for
-      what feels like our entire lives. Always recorded everything ourselves with
-      the gear we had. Our draw will probably be minimal — but we'll stand out with 
-      our passionate performance and joyful smiles :) We play venues, bars, cafés, festivals, stadiums and private parties — any setting, any volume.
-      <br><br>
-      Scratchy guitar dances, sentimental trumpet solos,
-      dreamy piano ballads and groovy drum machine vibes.
+      We've been playing music together for what feels like our entire lives.
     </p>
   </div>
-  <img src="P7120065-edit.jpg" alt="Belly Flop">
+  <img src="P7120065-edit.jpg">
 </section>
 
 <section class="music">
+
   <div class="projects">
     <h1>Music & Old Projects</h1>
 
-    <a class="project" href="https://open.spotify.com/intl-de/artist/69iFFen4QTi2q8iXSMzR3I?si=G6jeSj3OQtKkCAXnuzlMUA">
+    <div class="project">
       <img src="gallery (1).jpg">
       <span>Bellyflop</span>
-    </a>
-    
-    <a class="project" href="https://open.spotify.com/intl-de/artist/56JOB9aDxajmM8CEkIXu5n">
+      <a class="listen-btn" href="https://open.spotify.com/intl-de/artist/69iFFen4QTi2q8iXSMzR3I?si=G6jeSj3OQtKkCAXnuzlMUA" target="_blank">Listen</a>
+    </div>
+
+    <div class="project">
       <img src="MUI-edit.jpg">
       <span>Messed Up Interlude</span>
-    </a>
+      <a class="listen-btn" href="https://open.spotify.com/intl-de/artist/56JOB9aDxajmM8CEkIXu5n" target="_blank">Listen</a>
+    </div>
 
-    <a class="project" href="https://open.spotify.com/intl-de/artist/3hHNjReyNiRc3uCm97evbI">
+    <div class="project">
       <img src="Miles Roth-edit.jpg">
       <span>Miles Roth</span>
-    </a>
-
+      <a class="listen-btn" href="https://open.spotify.com/intl-de/artist/3hHNjReyNiRc3uCm97evbI" target="_blank">Listen</a>
+    </div>
   </div>
 
- <div class="demos">
-  <h1 style="font-size: 2.5rem; margin-bottom: 30px;">
-    Debut Album just released!
-  </h1>
+  <div class="demos">
+    <h1 style="font-size: 2.8rem; margin-bottom: 30px;">
+      Debut Album just released!
+    </h1>
 
-  <a href="https://open.spotify.com/intl-de/album/6olfuDpFxuk7IiyiqjYU3Q?si=7DqhGnTVT5yrtLfK1_gYHw" target="_blank">
-    <img 
-      src="Cover Album.jpeg" 
-      alt="Debut Album Cover"
-      style="width: 100%; border: 1px solid #777; cursor: pointer;"
-    >
-  </a>
-</div>
+    <img src="Cover Album.jpeg">
+
+    <a class="listen-btn" 
+       href="https://open.spotify.com/intl-de/album/6olfuDpFxuk7IiyiqjYU3Q?si=7DqhGnTVT5yrtLfK1_gYHw" 
+       target="_blank"
+       style="margin-top: 25px;">
+      Listen
+    </a>
+  </div>
+
 </section>
 
 <section class="video">
-  <h2>"Perfect Moment" — a documentary (to be released) </h2>
-  <iframe src="https://www.youtube.com/embed/9QPCT2OdLEk" allowfullscreen></iframe>
-  <p> Main Performance at 7:24</p>
+  <h2>"Perfect Moment" — a documentary</h2>
+  <iframe src="https://www.youtube.com/embed/9QPCT2OdLEk"></iframe>
 </section>
 
 <section>
   <h2>Gallery</h2>
   <div class="gallery">
-    
-
-    <a class="video-thumb" 
-       href="https://www.youtube.com/watch?v=VY8MjFh_bA4" 
-       target="_blank">
-      <iframe 
-        src="https://www.youtube.com/embed/VY8MjFh_bA4?controls=0&mute=1&playsinline=1">
-      </iframe>
-    </a>
-
     <img src="gallery (1).jpg">
     <img src="gallery (2).jpg">
     <img src="gallery (3).jpg">
-    <img src="gallery (5).jpg">
-    
-    
-    <a class="video-thumb" 
-        href="https://www.youtube.com/watch?v=pC3lyyMNFTY" 
-        target="_blank">
-      <iframe 
-          src="https://www.youtube.com/embed/pC3lyyMNFTY?controls=0&mute=1&playsinline=1">
-      </iframe>
-    </a> 
-    <img src="gallery (4).jpg">
-    <img src="gallery (6).jpg">
-    <img src="gallery (7).jpg">
-    
   </div>
-
 </section>
-<section class="gallery-note">
-  <p>
-    Photos by Jonas Schledorn
-  </p>
-</section>
-
 
 <section class="contact">
-  <h2>Contact&Booking</h2>
-  <p>
-  bellyflopofficial@gmail.com
-  <br><br>
-  Tel.: +49 151 59012909 or +49 176 60374049
-  <br><br>
-  instas:  
-  <br><br>
-  </p>
-  <div class="socials">
-    <a href="https://www.instagram.com/bellyflop.band">Bellyflop</a>
-    <a href="https://www.instagram.com/Milesrth">Miles</a>
-    <a href="https://www.instagram.com/mo.schmiddi">Moritz</a>
-  </div>
+  <h2>Contact</h2>
+  <p>bellyflopofficial@gmail.com</p>
 </section>
 
 </body>
